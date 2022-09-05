@@ -1,24 +1,51 @@
 .button {
-    background-color: #2a8050;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    cursor: pointer;
+  background-color: #2a8050;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 .button:hover {
-    background-color: #194d30;
+  background-color: #194d30;
 }
 
 .button span {
-    margin-right: 2rem; 
+  margin-right: 2rem;
 }
 
 .button span:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .badge {
-    background-color: #3cb371;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+  background-color: #3cb371;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+}
+
+.button:hover .badge,
+.button:active .badge {
+  background-color: #2a8050;
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
