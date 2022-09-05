@@ -1,0 +1,24 @@
+.button {
+    background-color: #2a8050;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #194d30;
+}
+
+.button span {
+    margin-right: 2rem; 
+}
+
+.button span:last-child {
+    margin-right: 0;
+}
+
+.badge {
+    background-color: #3cb371;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
