@@ -1,0 +1,16 @@
+.meals {
+  margin: 2rem 10%;
+  animation: mealsAppear 1s ease-out forwards;
+}
+
+@keyframes mealsAppear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
