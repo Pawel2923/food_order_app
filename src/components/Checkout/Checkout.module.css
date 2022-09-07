@@ -1,0 +1,60 @@
+.action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #2a8050;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+}
+
+.button-alt {
+  background-color: #2a8050;
+  color: white;
+  margin-left: 1rem;
+}
+
+.button:hover,
+.button:active {
+  background-color: #194d30;
+  border-color: #194d30;
+  color: white;
+}
+
+.control {
+  margin-bottom: 1rem;
+}
+
+.control:last-child {
+  margin: 0;
+}
+
+.control label {
+  font-weight: bold;
+}
+
+.control input {
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 0.3rem 0.5rem;
+  display: block;
+}
+
+.control input:focus {
+  outline-color: #2a8050;
+  background-color: #f4fff9;
+}
+
+.invalid input {
+  border-color: red;
+  background-color: #ffcdcd;
+}
+
+p.invalid {
+  color: red;
+  margin: 0;
+}

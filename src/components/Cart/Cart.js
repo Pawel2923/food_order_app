@@ -19,6 +19,11 @@ const Cart = (props) => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
 
+  const orderClickHandler = () => {
+    props.onShowCheckout();
+    props.onHideCart();
+  };
+
   const cartItems = cartCtx.items.map((item) => (
     <CartItem
       key={item.id}
@@ -37,14 +42,16 @@ const Cart = (props) => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      {!hasItems && (
-         <p>Cart is empty</p>
-      )}
+      {!hasItems && <p>Cart is empty</p>}
       <div className={classes.actions}>
-        <button className={classes["button--alt"]} onClick={props.onHideCart}>
+        <button className={classes["button-alt"]} onClick={props.onHideCart}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && (
+          <button className={classes.button} onClick={orderClickHandler}>
+            Order
+          </button>
+        )}
       </div>
     </Modal>
   );
