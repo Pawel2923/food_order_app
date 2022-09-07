@@ -58,3 +58,14 @@ p.invalid {
   color: red;
   margin: 0;
 }
+
+.loading {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.2em;
+  color: red;
+}

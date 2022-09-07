@@ -26,11 +26,21 @@ function App() {
     setCartIsShown(true);
     setCheckoutIsShown(false);
   };
-  
+
   return (
     <CartContextProvider>
-      {checkoutIsShown && <Checkout onHideCheckout={hideCheckoutHandler} />}
-      {cartIsShown && <Cart onHideCart={hideCartHandler} onShowCheckout={showCheckoutHandler} />}
+      {checkoutIsShown && (
+        <Checkout
+          onHideCheckout={hideCheckoutHandler}
+          onHideCart={hideCartHandler}
+        />
+      )}
+      {cartIsShown && (
+        <Cart
+          onHideCart={hideCartHandler}
+          onShowCheckout={showCheckoutHandler}
+        />
+      )}
       <Header onShowCart={showCartHandler} />
       <Meals />
     </CartContextProvider>
