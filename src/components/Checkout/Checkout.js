@@ -109,12 +109,7 @@ const Checkout = (props) => {
     if (isSucceeded) {
       props.onHideCart();
 
-      cartCtx.items.map((item) => {
-        for (let i = 0; i < item.amount; i++) {
-          cartCtx.removeItem(item.id);
-        }
-        return true;
-      });
+      cartCtx.clearCart();
     }
   };
 
